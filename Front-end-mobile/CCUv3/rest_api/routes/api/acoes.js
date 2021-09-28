@@ -42,7 +42,7 @@ router.post('/', async(req, res) => {
 });
 
 // @routes DELETE api/acao/:id
-// @desc DELETE An user
+// @desc DELETE An acao
 router.delete('/:id', async(req, res) => {
     try {
         const acao = await Acoes.findByIdAndDelete(req.params.id);
@@ -54,7 +54,7 @@ router.delete('/:id', async(req, res) => {
 });
 
 // @routes UPDATE api/acao/:id
-// @desc GET All An post
+// @desc GET All An acao
 router.patch('/:id', async(req, res) => {
     try {
         const user = await Users.findByIdAndUpdate(req.params.id, req.body);

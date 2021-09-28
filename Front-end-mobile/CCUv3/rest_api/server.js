@@ -5,6 +5,7 @@ const { MONGO_URI } = require('./config')
 // routes
 const authRoutes = require('./routes/api/users');
 const bodyRoutes = require('./routes/api/acoes');
+const MsgRoutes = require('./routes/api/mensagem');
 
 const app = express();
 
@@ -24,6 +25,8 @@ mongoose.connect(MONGO_URI, {
 app.use('/api/user', authRoutes);
 //Acoes Routes
 app.use('/api/acao', bodyRoutes);
+//Mensagens routes
+app.use('/api/user/mensagem', MsgRoutes);
 
 const PORT = process.env.PORT || 5000;
 

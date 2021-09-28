@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const MensagemSchema = new Schema({
     cpf: {
         type : String,
         required: true,
@@ -11,10 +11,7 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         min: 8,
-    },
-    mensagem: {
-        type: Array
     }
 });
 
-module.exports = mongoose.model('Users', UserSchema);
+module.exports = mongoose.model('Mensagens', MensagemSchema);
